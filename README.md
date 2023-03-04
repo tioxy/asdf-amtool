@@ -1,15 +1,13 @@
-# asdf-promtool
+# asdf-amtool
 
-[![Build Status](https://travis-ci.org/looztra/asdf-promtool.svg?branch=master)](https://travis-ci.org/looztra/asdf-promtool)
-
-[promtool](https://prometheus.io/docs/prometheus/latest/configuration/unit_testing_rules/) plugin for the [asdf](https://github.com/asdf-vm/asdf) version manager.
+[amtool](https://github.com/prometheus/alertmanager/tree/main/cmd/amtool) plugin for the [asdf](https://github.com/asdf-vm/asdf) version manager.
 
 ## Install
 
 ```bash
-asdf plugin-add promtool https://github.com/looztra/asdf-promtool
+asdf plugin-add amtool https://github.com/tioxy/asdf-amtool
 ```
 
 ## Use
 
-Check out the [asdf](https://github.com/asdf-vm/asdf) readme for instructions on how to install and manage versions of promtool.
+Check out the [asdf](https://github.com/asdf-vm/asdf) readme for instructions on how to install and manage versions of amtool.

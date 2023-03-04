@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-github_coordinates=prometheus/prometheus
+github_coordinates=prometheus/alertmanager
 releases_path="https://api.github.com/repos/${github_coordinates}/releases"
 cmd="curl -s"
 if [ -n "$GITHUB_API_TOKEN" ]; then

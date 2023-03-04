@@ -37,7 +37,7 @@ install_tool() {
   chmod +x "${binary_path}"
 }
 
-# prometheus-2.11.1.linux-amd64/promtool
+# alertmanager-0.25.0.linux-amd64/amtool
 
 get_binary_path_in_archive() {
   local archive_dir=$1
@@ -62,11 +62,10 @@ get_filename() {
   local version_short
   version_short="$(echo "$version" | tr -d 'v')"
 
-  echo "prometheus-${version_short}.${platform}.tar.gz"
+  echo "alertmanager-${version_short}.${platform}.tar.gz"
 }
 
-# https://github.com/prometheus/prometheus/releases/download/v2.11.1/prometheus-2.11.1.linux-amd64.tar.gz
-
+# https://github.com/prometheus/alertmanager/releases/download/v0.25.0/alertmanager-0.25.0.linux-amd64.tar.gz
 get_download_url() {
   local version="$1"
   local platform="$2"
@@ -74,9 +73,9 @@ get_download_url() {
   local filename
   filename="$(get_filename "$version" "$platform" "$binary_name")"
 
-  echo "https://github.com/prometheus/prometheus/releases/download/${version}/${filename}"
+  echo "https://github.com/prometheus/alertmanager/releases/download/${version}/${filename}"
 }
 
 tmp_download_dir="$(mktemp -d -t 'asdf_XXXXXXXX')"
 trap 'rm -rf "${tmp_download_dir}"' EXIT
-install_tool "$ASDF_INSTALL_TYPE" "$ASDF_INSTALL_VERSION" "$ASDF_INSTALL_PATH" "$tmp_download_dir" promtool
+install_tool "$ASDF_INSTALL_TYPE" "$ASDF_INSTALL_VERSION" "$ASDF_INSTALL_PATH" "$tmp_download_dir" amtool
