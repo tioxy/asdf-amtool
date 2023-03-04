@@ -1,5 +1,7 @@
 # asdf-amtool
 
+![GitHub Actions Status](https://github.com/tioxy/asdf-amtool/workflows/Test/badge.svg?branch=master)
+
 [amtool](https://github.com/prometheus/alertmanager/tree/main/cmd/amtool) plugin for the [asdf](https://github.com/asdf-vm/asdf) version manager.
 
 ## Install
